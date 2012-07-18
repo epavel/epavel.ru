@@ -11,11 +11,24 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use SmappDoctrine\Service\SmappDoctrineFactory;
+
 
 class IndexController extends AbstractActionController
 {
+    protected $em;
+    
     public function indexAction()
-    {
+    {   
+        //$em = $this->getServiceLocator()->get('SmappDoctrine');
+        //$con = $em->getConnection();
+        //$this->getEm();
+        //\Zend\Debug::dump($this->em);
         return new ViewModel();
+    }
+    
+    public function getEm()
+    {
+        return $this->em = $this->getServiceLocator()->get('SmappDoctrine');
     }
 }
