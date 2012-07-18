@@ -25,7 +25,7 @@ return array(
         ),
     ),
     'translator' => array(
-        'locale' => 'en_US',
+        'locale' => 'ru_RU',
         'translation_patterns' => array(
             array(
                 'type'     => 'gettext',
