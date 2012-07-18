@@ -1,7 +1,10 @@
 <?php
+//echo realpath('./vendor/DoctrineModule/src'); die;
 return array(
     'modules' => array(
         'Application',
+        'DoctrineModule',
+        'DoctrineORMModule'
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
@@ -10,6 +13,7 @@ return array(
         'module_paths' => array(
             './module',
             './vendor',
+            'DoctrineModule' => realpath('./vendor/DoctrineModule/src'),
         ),
     ),
 );
