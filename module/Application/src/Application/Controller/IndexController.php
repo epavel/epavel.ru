@@ -11,8 +11,10 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use SmappDoctrine\Service\SmappDoctrineFactory;
 
+//use SmappDoctrine\Service\SmappDoctrineFactory;
+use SmappSocialOAuth\Service\SocialOAuth;
+use SmappSocialOAuth\Provider;
 
 class IndexController extends AbstractActionController
 {
@@ -24,6 +26,21 @@ class IndexController extends AbstractActionController
         //$con = $em->getConnection();
         //$this->getEm();
         //\Zend\Debug::dump($this->em);
+        //$this->request;
+        
+        $options = array(
+            'provider' => 'Google',
+            'client_id' => '352061932588.apps.googleusercontent.com',
+            'client_secret' => 'VP9zTdqkOp6d6eKmJ4J_RJEX',
+            'redirect_uri' => 'http://epavel.ru/curl.php',
+            'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
+            'authorize_url' => 'https://accounts.google.com/o/oauth2/auth',
+            'access_url' => 'https://accounts.google.com/o/oauth2/token',
+        );
+            
+        //$provider = Provider::factory($options);
+        //\Zend\Debug::dump($provider);
+        //die('<hr>ok');
         return new ViewModel();
     }
     

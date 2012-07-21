@@ -1,21 +1,8 @@
 <?php
 return array(
-    'smapp_doctrine' => array(
-        'connection' => array(
-            'driver'  => 'pdo_mysql',
-            'host'    => 'localhost',
-            'user'    => 'root',
-            'password'=> '',
-            'dbname'  => 'test',
-            'charset' => 'UTF-8',
-            'driver_options' => array(
-                PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
-            ),
-        ),
-    ),
     'service_manager' => array(
         'factories' => array(
-            'SmappDoctrine'       => 'SmappDoctrine\Service\SmappDoctrineFactory',
+            'Doctrine'       => 'SmappDoctrine\Service\SmappDoctrineFactory',
          ),
         'aliases' => array (
             
@@ -32,6 +19,6 @@ return array(
                 'base_dir' => __DIR__ . '/../language',
                 'pattern'  => '%s.mo',
             ),
-    ),
+        ),
     ),
 );
