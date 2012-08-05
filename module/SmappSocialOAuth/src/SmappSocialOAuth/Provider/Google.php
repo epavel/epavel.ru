@@ -63,7 +63,7 @@ class Google {
 
         $http = new HttpClient($this->params['access_url']);
         $http->setEncType(\Zend\Http\Client::ENC_URLENCODED)->setMethod('POST');
-        $http->setHeaders(array('User-Agent: oauth2-draft-v10', 'Accept: application/json'));
+        //$http->setHeaders(array('User-Agent: oauth2-draft-v10', 'Accept: application/json'));
         $req = $http->setParameterPost($urlParams)->send();
         
         $this->accessInfo = json_decode($req);

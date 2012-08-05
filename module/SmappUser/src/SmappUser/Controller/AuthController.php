@@ -49,6 +49,10 @@ class AuthController extends AbstractActionController
     
     public function processAction()
     {
+        
+        var_dump($_REQUEST);
+        die;
+        
         $options = array(
                 'provider' => 'Google',
                 'client_id' => '352061932588.apps.googleusercontent.com',
